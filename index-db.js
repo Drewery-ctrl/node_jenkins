@@ -1,7 +1,7 @@
-var express = require('express');
-var app = express();
-var mysql = require("mysql");
-var con = mysql.createConnection({ host: process.env.MYSQL_HOST, user: process.env.MYSQL_USER, password: process.env.MYSQL_PASSWORD, database: process.env.MYSQL_DATABASE});
+let express = require('express');
+let app = express();
+let mysql = require("mysql");
+let con = mysql.createConnection({ host: process.env.MYSQL_HOST, user: process.env.MYSQL_USER, password: process.env.MYSQL_PASSWORD, database: process.env.MYSQL_DATABASE});
 
 // mysql code
 
@@ -27,9 +27,9 @@ app.get('/', function (req, res) {
 
 
 // server
-var server = app.listen(3000, function () {
-    var host = server.address().address;
-    var port = server.address().port;
+let server = app.listen(3000, function () {
+    let host = server.address().address;
+    let port = server.address().port;
 
     console.log('Example app listening at http://%s:%s', host, port);
 });
